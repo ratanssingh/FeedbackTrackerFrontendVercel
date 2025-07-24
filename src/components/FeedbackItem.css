@@ -1,0 +1,15 @@
+.feedback-item {
+  background: linear-gradient(to bottom right, #c94bdb, #4b6cb7);
+  border: 1px solid #e1e4e8;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: red;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.feedback-item h4 {
+  color: #333;
+}

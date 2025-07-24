@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-image:url('./assets/colorgreedimage.jpg'); 
+  background-size: cover; 
+  background-position: center;
+  background-attachment: fixed; 
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(to bottom right, #c94bdb, #4b6cb7);
+  border-radius: 8px;
+  margin-bottom: 40px;
+  border-style: solid;
+  border-color: red; 
+}
+
+
+.App-header h1 {
+  margin: 0;
+}
+
+.feedback-list {
+  text-align: left;
+}
+
+.feedback-item {
+  background: linear-gradient(to bottom right, #c94bdb, #4b6cb7);
+  border: 1px solid #e1e4e8;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: red;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-item h4 {
+  color: #333;
+}
+
+.feedback-actions {
+  display: flex;
+  gap: 10px;
+}
+
+
+.feedback-actions button:nth-child(1) {
+  flex: 1; /* This makes the button take up equal space */
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; 
+  border-style: dotted;
+  border-color: green;
+}
+.feedback-actions button:nth-child(1):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.feedback-actions button:nth-child(2) {
+  flex: 1; /* This makes the button take up equal space */
+  background-color: #ffc107;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; 
+  border-style: dotted;
+  border-color: yellow;
+}
+.feedback-actions button:nth-child(2):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.feedback-actions button:nth-child(3) {
+  flex: 1; /* This makes the button take up equal space */
+  background-color: #dc3545; /* Red */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; 
+  border-style: dotted;
+  border-color: red;
+}
+.feedback-actions button:nth-child(3):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.open-modal-btn {
+  display: inline-block;
+  background: linear-gradient(to right, #c94bdb, #4b6cb7);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.open-modal-btn:hover {
+  transform: translateY(-3px);
+  background-color: #149b96;
+}
+.back-button {
+  display: inline-block;
+  background: linear-gradient(to right, #c94bdb, #4b6cb7);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+}
+
+.back-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

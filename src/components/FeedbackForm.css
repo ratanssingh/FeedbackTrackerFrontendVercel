@@ -1,0 +1,86 @@
+.feedback-form {
+  background: linear-gradient(to bottom right, #c94bdb, #4b6cb7);
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 320px;
+  color: red;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  position: relative;
+  align-content: center;
+  border-style: solid;
+  border-color: red;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  align-content: center;
+}
+
+.form-subtitle {
+  font-size: 12px;
+  margin-bottom: 18px;
+  color: #f0f0f0;
+}
+
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid white;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background: transparent;
+}
+
+.input-group input,
+.input-group textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.input-group textarea {
+  resize: none;
+  height: 80px;
+}
+
+.input-icon {
+  color: white;
+  font-size: 14px;
+}
+
+
+.feedback-form button[type="submit"] {
+  background-color: #1abbb5;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.feedback-form button[type="submit"]:hover {
+  background-color: #149b96;
+}
+.error-box {
+  color: #ff4d4f;
+  background-color: #fff0f0;
+  padding: 10px 15px;
+  border-left: 5px solid #ff4d4f;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
