@@ -23,7 +23,7 @@ const FeedbackForm = ({ onFeedbackAdded }) => {
     }
 
     try {
-      await axios.post('https://feedbacktrackerbackendvercel.onrender.com/', {
+      await axios.post('https://feedbacktrackerbackendvercel.onrender.com/feedback', {
         name,
         email,
         message,
