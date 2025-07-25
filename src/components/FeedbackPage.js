@@ -6,7 +6,7 @@ import FeedbackList from './FeedbackList';
 import FeedbackModal from './FeedbackModal';
 import Toast from './Toast'; 
 
-const API_URL = 'https://feedback-tracker-backend-vercel.vercel.app';
+const API_URL = 'https://feedbacktrackerbackendvercel.onrender.com';
 
 function FeedbackPage() {
   const [feedbackData, setFeedbackData] = useState([]);

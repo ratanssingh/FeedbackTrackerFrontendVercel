@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './FeedbackItem.css';
 
-const API_URL = 'https://feedback-tracker-backend-vercel.vercel.app';
+const API_URL = 'https://feedbacktrackerbackendvercel.onrender.com';
 
 const FeedbackItem = ({ feedback, onVote, onDelete }) => {
   const handleVote = async (action) => {
