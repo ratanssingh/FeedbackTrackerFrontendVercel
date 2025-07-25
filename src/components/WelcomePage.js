@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Link is the React Router way to navigate
+import { Link } from 'react-router-dom'; 
 import { FaBullhorn, FaVoteYea, FaTrash } from 'react-icons/fa';
-import './WelcomePage.css'; // We will create this new CSS file
+import './WelcomePage.css'; 
 
 const WelcomePage = () => {
   return (

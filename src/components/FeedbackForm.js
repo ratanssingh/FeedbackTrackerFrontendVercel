@@ -23,7 +23,7 @@ const FeedbackForm = ({ onFeedbackAdded }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3001/feedback', {
+      const response = await axios.post('https://feedback-tracker-backend-vercel.vercel.app/', {
         name,
         email,
         message,

@@ -6,18 +6,17 @@ import FeedbackList from './FeedbackList';
 import FeedbackModal from './FeedbackModal';
 import Toast from './Toast'; 
 
+const API_URL = 'https://feedback-tracker-backend-vercel.vercel.app';
+
 function FeedbackPage() {
   const [feedbackData, setFeedbackData] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
-  
   const [showToast, setShowToast] = useState(false);
 
-  
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const response = await axios.get('http://localhost:3001/feedback');
+        const response = await axios.get(`${API_URL}/feedback`);
         setFeedbackData(response.data);
       } catch (error) {
         console.error('Error fetching feedback:', error);
@@ -26,21 +25,16 @@ function FeedbackPage() {
     fetchFeedback();
   }, []);
 
-
- 
   const handleFeedbackAdded = (newFeedback) => {
-    setFeedbackData([newFeedback, ...feedbackData]); 
-    setIsModalOpen(false); 
-    
-    
+    setFeedbackData([newFeedback, ...feedbackData]);
+    setIsModalOpen(false);
+
     setShowToast(true);
-    
     setTimeout(() => {
       setShowToast(false);
     }, 3000);
   };
 
-  
   const handleVote = (updatedFeedback) => {
     setFeedbackData(feedbackData.map(item => (item.id === updatedFeedback.id ? updatedFeedback : item)));
   };
@@ -48,7 +42,6 @@ function FeedbackPage() {
   const handleDelete = (deletedId) => {
     setFeedbackData(feedbackData.filter(item => item.id !== deletedId));
   };
-
 
   return (
     <div className="App">

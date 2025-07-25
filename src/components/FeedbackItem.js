@@ -2,10 +2,12 @@ import React from 'react';
 import axios from 'axios';
 import './FeedbackItem.css';
 
+const API_URL = 'https://feedback-tracker-backend-vercel.vercel.app';
+
 const FeedbackItem = ({ feedback, onVote, onDelete }) => {
   const handleVote = async (action) => {
     try {
-      const response = await axios.put(`http://localhost:3001/feedback/${feedback.id}/vote`, { action });
+      const response = await axios.put(`${API_URL}/feedback/${feedback.id}/vote`, { action });
       onVote(response.data);
     } catch (error) {
       console.error('Error voting:', error);
@@ -14,7 +16,7 @@ const FeedbackItem = ({ feedback, onVote, onDelete }) => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3001/feedback/${feedback.id}`);
+      await axios.delete(`${API_URL}/feedback/${feedback.id}`);
       onDelete(feedback.id);
     } catch (error) {
       console.error('Error deleting feedback:', error);
