@@ -23,17 +23,21 @@ const FeedbackForm = ({ onFeedbackAdded }) => {
     }
 
     try {
-      await axios.post('https://feedbacktrackerbackendvercel.onrender.com/', {
+      
+      const response = await axios.post('https://feedbacktrackerbackendvercel.onrender.com/', {
         name,
         email,
         message,
       });
 
+      // Now this line will work because the 'response' variable exists.
       onFeedbackAdded(response.data);
+
       setName('');
       setEmail('');
       setMessage('');
     } catch (error) {
+      // Your improved error logging is good and has been kept.
       console.error('Error submitting feedback:', error.response?.data || error.message);
       alert('Failed to submit feedback.');
     }
