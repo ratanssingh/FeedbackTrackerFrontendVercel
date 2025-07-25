@@ -7,7 +7,7 @@ const FeedbackForm = ({ onFeedbackAdded }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,23 +23,18 @@ const FeedbackForm = ({ onFeedbackAdded }) => {
     }
 
     try {
-      const response = await axios.post('https://feedback-tracker-backend-vercel.vercel.app/', {
+      await axios.post('https://feedback-tracker-backend-vercel.vercel.app/feedback', {
         name,
         email,
         message,
       });
 
-      
-      onFeedbackAdded(response.data); 
-
-      
+      onFeedbackAdded(response.data);
       setName('');
       setEmail('');
       setMessage('');
-
-      
     } catch (error) {
-      console.error('Error submitting feedback:', error);
+      console.error('Error submitting feedback:', error.response?.data || error.message);
       alert('Failed to submit feedback.');
     }
   };
